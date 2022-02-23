@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!-- id선택자는 태그명과는 상관 없이
+특정 태그에 부여된 id="값"을 고려해서
+css를 적용하는 선택자입니다.
+이때, 특정id를 부여하는 경우
+같은 이름을 2개 이상의 태그에 동시에 부여하지 않는것이 원칙입니다.-->
+<html lang="en">
+<head>
+    <style>
+        /*
+        id명{(css구문);}
+        */
+
+        /* #title (id="title") 글씨 색깔은 crimson으로 적용해주세요.*/
+        #title{ color: crimson;}
+
+        /* #content(id"content") 글씨 배경색을 gold로 적용해주세요*/
+        #content{background-color: gold;}
+
+        #h2{color : green;}
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id ="title">css 잘하는법</p>
+    <p id ="content">그냥 많이 쳐봅니다.
+        <h2 id ="h2">라라라</h2>
+    </p>
+    
+</body>
+</html>
