@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        /*
+        clear는 float으로 배치된 박스들의 흐름을 해제시키는 구문입니다.
+        float을 해제하지 않으면 추후 레이아웃 구성시
+        문제가 될 수 있으므로, inline배치가 끝난 부분에 대해서는 반드시 해제를 해 줘야 합니다.
+        clear left; float된 박스 중 좌측이 짧을때 좌측부터 채워서 내려옴
+        clear right float된 박스 중 우측이 짧을때 우측부터 채워서 내려옴
+        clear both 제일 많이 쓰고, 이 속성을 받은 태그는 float흐름과 상관 없이 다음줄로 강제로 내려옴
+        */
+        *{
+            margin: 0; padding: 0;
+        }
+        body{
+            font : 12px "굴림", Guilm;
+            margin:20px;
+        }
+        #warpper{
+            width:550px;
+        }
+        p{
+            text-align: justify;
+        }
+        .skate{
+            width: 250px;
+            float:left;
+        }
+        .football{
+            width:220px;
+            float:right;
+        }
+        .ollimpic{
+            clear:both;
+        }
+
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id ="warpper">
+        <div class="skate">
+            <p>
+                우리의 자랑 스포츠의 꽃 김은호 선수의
+                요즘 행보에 대해 일부의 사람들이 불만을 
+                토로하고 있다. 그녀의 주류광고가 문제가 된
+                것인데 그렇다면 김은호는 미성년자도 아닌데 왜 주류광고에
+                나오면 안되고 다른 스타들은 되는 이런 우스운경우가 있을수 있을까?
+                다른 스타들도 김은호 처럼 소중한 우리 스타고
+                김은호도 다른 사람처럼 인형이 아닌 성인의 한 사람인데 말이다.
+            </p>
+        </div>
+    <div class ="football">
+        <p>스포츠스타 박지성은 수타라는 말이 좀 퇴폐적으로 여겨지던 시절 그 말을 완전히 깨끗히 세척해서 원래 뜻
+            그대로 만들어 놓은 사람이다.사람이 어쩌면 저렇게 참될 수 있을까 라고 생각하게 한 장본인 그의 과거와 현재의 행동거지를 보며 노력과 지성의 
+            결정채ㅔ라고 감탄해 마지 않던 행복한 기억을 되살린다 어떤 약보다도 강하고 부작용없는
+            정신강장제가 되어준 진정한 스타인 그를 존경하지 않을 사람이 있을까 과연!!
+        </p>
+    </div>
+    <div class="ollimpic">
+        <p>어랑러아ㅣㅓㄹ이ㅓ이런ㅇㅇ러ㅏㅇ라ㅓㅇ
+            ㅇ러ㅏㅣ어랑러
+            ㅇ리ㅓㅇ리ㅏ어
+            이어리
+
+        </p>
+    </div>
+    </div>
+    
+</body>
+</html>
