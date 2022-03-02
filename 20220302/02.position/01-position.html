@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        /*
+        포지션은 블록을 박스의 위치를 기준으로 배치하는 기술이고
+        주로 컨텐츠를 겹치게 배열하거나 덮어씌우는 등의 상황에 유용하게 쓰입니다.
+        position:static-요소를 겹칠 수 없는 상태(디폴트값)
+        position:relative- avsolute속성의 축이 되는 요소
+        position:absolute-relative의 자식 태그에 걸면
+        relative요소의 위치를 기준점을 ㅗ삼게 전환
+        position:fixed-거의 안씀. 구형 브라우저에서 주로 사용함.
+        */
+        *{
+            margin:0; padding:0;
+        }
+        body{
+            font:12px "굴림",Guilm;
+            margin: 20px;
+            background:url(bg_grid.gif.png);
+        }
+        .myred{
+            background-color: red;
+            position: absolute;
+            top:100px;
+            left:100px;
+            z-index: 1;
+        }
+        .myblue{
+            position:absolute;
+            top:50px;
+            left:50px;
+            background-color: blue;
+            z-index: 2;
+        }
+        .mygreen{
+            position: absolute;
+            top:0px;
+            left:0px;
+            background-color: green;
+            z-index: 3;
+        }
+        p{
+            width:130px;
+            height:80px;
+            padding:10px;
+            color:white;
+            font-weight: bold;
+        }
+        #box{
+            position:relative;
+            width: 550px;
+            border:1px solid royalblue;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id ="box">
+        <p class="myred">
+            박스의 크기와 위치를 잘 살펴봐야합니다.
+        </p>
+        <p class="myblue">
+            박스의 포지션 속성을 바꿔가며 테스트합니다.
+        </p>
+        <p class="mygreen">
+            포지션을 이해하기 위해서는 많은 테스트가 필요합니다.
+        </p>
+    </div>
+    
+</body>
+</html>

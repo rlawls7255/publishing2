@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        #header{
+            border:2px dotted red; height:100px;
+        }
+        .sidebar{
+            border:1px solid gray;
+                width:200px; height:300px;
+                float: left;
+        }
+        .content{
+            border:1px solid gray;
+            width:330px; height:300px;
+            float:right;
+        }
+        #footer{
+            border:2px dashed green; height:100px;
+            clear: both;
+        }
+        #body{
+            border:3px solid blue;
+            height: 320px;
+        }
+        body{
+            border:1px soild gray;
+            width:600px;
+            height:1000px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id ="header">
+        <p>
+            div#header <br/>
+            헤더가 들어갈 자리입니다.<br/>
+            border:2px dotter red; height:100px;<br/>
+        </p>
+    </div>
+    <div id ="body">
+        <p>div#body</p>
+        <div class ="sidebar">
+            <p>div.sidebar<br/>
+                사이드바 자리<br/>
+                border:1px solid gary;<br/>
+                width:200px; height:300px;<br/>
+            </p>
+        </div>
+        <div class ="content">
+            div.content
+            컨텐츠 자리 border:1px solid gray;
+            width:330px; height:300px;
+        </div>
+    </div>
+    <div id ="footer">
+        <p>div#footer
+            푸터가 들어갈 자리입니다.
+        border:2px dashed green; height:100px;
+        </p>
+    </div>
+    
+</body>
+</html>
