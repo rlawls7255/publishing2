@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        //배열은 Array()를 활용해 만듭니다.
+        var nameList = new Array();// 빈 리스트 생성[]
+
+        // 인덱싱을 활용한 데이터 저장
+        nameList[0] = "자바스크립트";
+        nameList[1] = "스프링";
+        nameList[2] = "JSP";
+        nameList[3] = "JAVA";
+        nameList[4] = "JPA";
+
+        //nameList의 0번째 요소를 브라우저에 출력해주세요.
+        document.write(nameList[0]);
+
+        // 저장공간의 크기를 지정해 생성하기
+        var score = new Array(4);
+        score[0] = 50;
+        score[1] = 68;
+        score[2] = 24;
+        score[3] = 89;
+        document.write(score + "<br/>");
+
+        //생성하면서 데이터까지 넣는 경우
+        var days = new Array("일", "월", "화", "수", "목", "금", "토",);
+        document.write(days + "<br/>");
+
+        // Date를 생성해서 오늘 요일을 얻어온 다음
+        // 위의 days 어레이를 활용해 오늘이 무슨 요일인지
+        // 숫자가 아닌 요일명으로 나오도록 처리해주세요.
+        var today = new Date();
+        var nowDay = today.getDay();
+        document.write(days[nowDay]);
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>

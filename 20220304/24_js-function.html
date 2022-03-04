@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        // 자바스크립트의 함수는 기본적으로
+        // function 함수명(파라미터1, 파라미터2...){
+            // 실행문;
+            //}
+            // 형식으로 선언하고
+            // 호출은
+            // 함수명(자료1, 자료2...);
+            // 와 같이 합니다.
+
+            //1. 함수 선언
+            function greet1(name){
+                alert(name + "님 안녕하세요.");
+            }
+
+            // 2. 본인 이름을 넣어서 greet1을 호출해보세요.
+             greet1("rlawls");
+
+             // 3. 함수 다시 선언
+             function greet2(){
+                 alert("gdgdgdgdgdgd");
+             }
+
+             function greet3(){
+                 alert("javascript공부중입니다.")
+             }
+
+             // 4. 호출 조건을 특정 버튼 클릭시로 설정
+             // 아래쪽 body태그를 보세요.
+             
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 특정 요소에 onclick ="실행코드" 속성은
+    해당 요소가 클릭되었을때 연결된 구문을 실행합니다.
+현재 아래 버튼을 클릭할 경우 greet2(); 구문을 실행해
+greet2() 함수를 호출합니다.-->
+    <button onclick="greet2();">버튼</button>
+    <button onclick ="greet3();">무엇을공부중일까요</button>
+    
+</body>
+</html>
