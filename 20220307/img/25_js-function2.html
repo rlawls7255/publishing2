@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        var num = 0; // 그림 번호
+
+        function nextPic(){
+            num++ // 다음 그림 번호로 이동
+
+            // 마지막 번호까지 돌면 다시 0으로 돌아오는 장치를 추가해주세요.
+            if(num == 4){
+                num == 0;
+            }
+            function prevPic(){
+                num--;
+            }
+            document.getElementById("pic").scr
+                 = "img/img" + num + ".jpg";// 그림 번호 바꾸기
+                 return false; // 그림 변경만 하고 a태그 클릭으로 인한 주소 이동은 막기.
+        }
+
+        console.log(document.getElementById("pic"));
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>이미지 넘기기</h1>
+
+
+    <img width="500px" src="img/img0.png" id="pic">
+
+    <a href="#" onclick= "return nextPic()">&gt;&gt; </a>
+    <script>
+        //console.log(document.getElementById("pic").src);
+        // id =""
+    </script>
+    
+</body>
+</html>

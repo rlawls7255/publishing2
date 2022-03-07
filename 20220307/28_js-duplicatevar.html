@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        // 전역변수와 지역변수는 같은 변수명으로 존재할 수 있으나
+        // 호출은 별개로 진행됩니다.
+        // 변수명을 전역/ 지역별로 중복해서 쓰는것은
+        // 권장되지 않으나, 혹시 불가피하게 사용하는 경우
+        // 구분을 잘 해주셔야 합니다.
+        var i = 10; // 전역변수 i
+        var num = 20; // 전역변수 num
+
+        function theTest(){
+            var num = i + 200; // theTest 지역변수 num
+            alert(num); // 자기 지역 우선 호출
+        }
+         theTest(); // 지역이 생성되었다가 소멸함
+
+         function theFnc(){
+             document.write(num);
+         }
+         theFnc(); // 지역 생성되었다가 소멸
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>

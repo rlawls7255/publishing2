@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        // 자바스크립트는 따로 메인메서드가 존재하지 않고
+        // 그냥 script태그를 위에서 아래방향으로 순차적으로
+        // 실행하기 때문에, 중괄호 내부에 속하지 않으면서
+        // script 태그 내부에 존재하는 변수가 있을 수 있습니다.
+        // script 영역이 모든 영역의 상위 영역이므로, 이런
+        // script 영역에 직접 속한 변수를 전부 전역변수로 간주합니다.
+        // 중괄호 내부에 있지 않으면 전부 전역변수로 간주합니다.
+        var num;
+
+        function theFnc(){
+            num=30;
+        }
+        theFnc();
+        console.log(num);
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
