@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        // 40번 파일을 통해 없던 텍스트를 집어넣거나
+        // 혹은 텍스트를 교체하는 등의 로직을 연습해봤습니다.]
+        // 이번에는 단순 텍스트가 아닌 element를 집어넣는
+        // 부분에 대해서 알아보겠습니다.
+
+        // 순서
+        // 1. createElement를 이용해 가상 요소를 만들어줍니다.
+        // 2. 가상 요소의 내용물을 필요하다면 채워줍니다.(텍스트 등)
+        // 3. DOM요소에 appendChild를 이용해 넣어줍니다.
+
+        // 문서로딩 후 JS코드가 실행되도록 세팅해주세요.
+        window.onload = function(){
+
+            // dom요소 생성(적용은 아직 안 됨)
+            var newPTag = document.createElement("p");// <p> </P> 생성 (배치 안됨)
+
+            var newBtn1 = document.createElement("button");// <button> </button> 생성( 배치 안됨)
+            var newBtn2 = document.createElement("button");
+
+            // 태그 내부에 들어갈 문자는, createTextNode로
+            // 만든 다음 조립해주는 형식으로 진행합니다.
+            var text1 = document.createTextNode("버튼1");
+            var text2 = document.createTextNode("버튼2");
+             
+            // 속성 생성하기
+            newBtn1.setAttribute("id", "btn1"); //id = "btn1"
+            newBtn2.setAttribute("id", "btn2"); //id= "btn2"
+
+            // 문서 조립하기
+            // p태그의 자식으로 버튼1, 2 를 넣어주고
+            // 버튼1, 2의 자식으로 text1, 2를 넣어줍니다.
+            newPTag.appendChild(newBtn1); // <p>
+            newPTag.appendChild(newBtn2); // <button></button>
+                                          // <button></button>
+                                          // <p>
+                                            
+            // bod태그를 가져온 다음, ptag를 body 사이에 끼워넣어주세요.
+            // 1. 변수에 body태그를 저장합니다.
+            var body = document.getElementsByTagName("body");
+            // 2. 조립완려된 newPTag를 body태그 사이에 자식으러 넣어줍니다.
+            body[0].appendChild(newPTag);   
+            console.log(body[0]);
+            // 3. newBtn1, 2에 text1, 2를 마저 끼워넣어주세요.
+            newBtn1.appendChild(text1);
+            newBtn2.appendChild(text2);
+        }
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id ="theBox">
+        <h1>요소 생성 연습</h1>
+    </div>
+    
+</body>
+</html>
