@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        #menu {
+            background-color:chartreuse;
+            width:200px;
+            padding:10px;
+        }
+        .list {
+            display:none;
+        }
+    </style>
+    <script>
+        // 화면 중간에 마우스를 가져다 대면 음식메뉴가 보이고
+        // 마우스를 떼면 음식메뉴가 안 보이게
+        // jquery를 이용해 만들어주세요.
+        $(function(){
+            //$("#menu").mouseenter(function(){
+            //    $(".list").css("display", "block");
+            //});
+            //$("#menu").mouseleave(function(){
+            //    $(".list").css("display", "none");
+            //});
+
+            $("#menu").hover(function(){
+                // 올리면 실행
+                $(".list").css("display", "block");
+            }, function(){
+                // 빼면 실행
+                $(".list").css("display", "none");
+            });
+
+        });
+        
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="menu">
+        <h3>요리 메뉴</h3>
+        <ul class="list">
+            <li>피자 : 20000원</li>
+            <li>치킨 : 20000원</li>
+            <li>탕수육 : 30000원</li>
+            <li>초밥 : 15000원</li>
+            <li>소고기> : 40000원</li>
+        </ul>
+    </div>
+</body>
+</html>
