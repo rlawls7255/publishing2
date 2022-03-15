@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        * { 
+            margin:0;
+            padding:0;
+        }
+        #menu {
+            width:200px;
+            background-color: cornflowerblue;
+            color:gold;
+        }
+    </style>
+    <script>
+        // 메뉴판을 만들어주시되
+        // 이번에는 hover가 아닌 onclick을 이용해서
+        // 버튼을 클릭하면 메뉴판이 보이고
+        // 다시 클릭하면 메뉴판이 사라지도록 하겠습니다.
+        $(() => {
+        $("#btn").click(function(){
+            // 메뉴 숨겼다 노출
+            $("#list").toggle("fast");
+
+            //특정 태그의 여닫는 부분 사이의 문자를 얻기 위해서
+            // $("요소지정").text() 는 사이에 든 문자를 확인할 수 있습니다.
+            // $("요소지정").text("바꿀문자열") 은 사이의 문자를 바꿔줍니다.
+            //console.log($("#btn").text("가나다라"));
+
+            // 클릭할때마다 메뉴가 열려있으면 "메뉴닫기"
+            // 메뉴가 닫혀있으면 "메뉴열기" 로 button태그 글씨가 바뀌게 해주세요.
+            if($("#btn").text() === "메뉴닫기"){
+                $("#btn").text("메뉴열기");
+            } else {
+                $("#btn").text("메뉴닫기");
+            }
+
+        });
+    });
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="menu">
+        <button id="btn">메뉴닫기</button>
+        <ul id="list">
+            <li>닭갈비 : 1인분 13000원</li>
+            <li>삼겹살 : 1인분 15000원</li>
+            <li>항정살 : 1인분 16000원</li>
+            <li>닭목살 : 1인분 20000원</li>
+            <li>소등심 : 1인분 40000원</li>
+        </ul>
+    </div>
+</body>
+</html>
